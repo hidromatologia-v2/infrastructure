@@ -6,6 +6,7 @@ resource "helm_release" "memphis" {
 
   timeout = 1200  # equivalent of the --wait flag; adjust as necessary
 
+  # Variables
   set {
     name  = "cluster.enabled"
     value = tostring(var.cluster_enabled)

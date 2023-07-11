@@ -30,6 +30,7 @@ module "helm_memphis" {
   connection_token = var.memphis_connection_token
 }
 
+# Redis
 module "helm_redis" {
   source           = "../../modules/helm-redis"
   kube_namespace   = var.kube_namespace
@@ -41,4 +42,18 @@ module "helm_redis" {
   cluster_nodes    = var.redis_cluster_nodes
   cluster_replicas = var.redis_cluster_replicas
   password         = var.redis_password
+}
+
+# Postgres
+module "helm_postgres" {
+  source           = "../../modules/helm-postgres"
+  kube_namespace   = var.kube_namespace
+  providers        = {
+    helm = helm
+  }
+
+  # Variables
+  username      = var.postgres_username
+  password      = var.postgres_password
+  replica_count = var.postgres_replica_count
 }

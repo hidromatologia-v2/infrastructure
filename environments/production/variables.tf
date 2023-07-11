@@ -49,3 +49,23 @@ variable "redis_password" {
   type        = string
   default     = "password" # TODO: FIXME: Change this to a randomly generated credentials
 }
+
+# Postgres
+
+variable "postgres_username" {
+    description = "postgresql.username"
+    type        = string
+    default     = "postgres"
+}
+
+variable "postgres_password" {
+    description = "postgresql.password"
+    type        = string
+    default     = "password" # TODO: FIXME: Change this to a randomly generated credentials
+}
+
+variable "postgres_replica_count" {
+    description = "postgresql.replicaCount"
+    type        = number
+    default     = 6
+}
