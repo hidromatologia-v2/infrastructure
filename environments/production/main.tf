@@ -18,9 +18,6 @@ resource "kubernetes_namespace" "namespace" {
 # Memphis
 module "helm_memphis" {
   source           = "../../modules/helm-memphis"
-  providers        = {
-    helm = helm
-  }
 
   # Variables
   cluster_enabled  = true
@@ -34,9 +31,6 @@ module "helm_memphis" {
 module "helm_redis" {
   source           = "../../modules/helm-redis"
   kube_namespace   = var.kube_namespace
-  providers        = {
-    helm = helm
-  }
 
   # Variables
   cluster_nodes    = var.redis_cluster_nodes
@@ -48,9 +42,6 @@ module "helm_redis" {
 module "helm_postgres" {
   source           = "../../modules/helm-postgres"
   kube_namespace   = var.kube_namespace
-  providers        = {
-    helm = helm
-  }
 
   # Variables
   username      = var.postgres_username
