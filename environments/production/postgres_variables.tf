@@ -1,24 +1,21 @@
-variable "kube_namespace" {
-  description = "Namespace to deploy"
-  type        = string
-}
-
-variable "username" {
+variable "postgres_username" {
   description = "postgresql.username"
   type        = string
 }
 
-variable "password" {
+variable "postgres_password" {
   description = "postgresql.password"
   type        = string
 }
 
-variable "database" {
-  description = "postgres_database"
+variable "postgres_database" {
+  description = "postgresql.database"
   type        = string
+  default     = "hidromatologia"
 }
 
-variable "replica_count" {
+variable "postgres_replica_count" {
   description = "postgresql.replicaCount"
   type        = number
+  default     = 6
 }

@@ -5,11 +5,11 @@ resource "helm_release" "redis-cluster" {
   namespace  = var.kube_namespace
 
   # Variables
-  set{
+  set {
     name  = "cluster.nodes"
     value = var.cluster_nodes
   }
-  set{
+  set {
     name  = "cluster.replicas"
     value = var.cluster_replicas
   }
@@ -17,7 +17,7 @@ resource "helm_release" "redis-cluster" {
     name  = "usePassword"
     value = "true"
   }
-  set{
+  set {
     name  = "password"
     value = var.password
   }

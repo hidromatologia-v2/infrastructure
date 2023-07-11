@@ -5,13 +5,13 @@ variable "kube_namespace" {
 
 # Redis config
 variable "cluster_nodes" {
-    description = "cluster.nodes"
-    type        = number
+  description = "cluster.nodes"
+  type        = number
 }
 
 variable "cluster_replicas" {
-    description = "cluster.replicas"
-    type        = number
+  description = "cluster.replicas"
+  type        = number
 }
 
 variable "password" {

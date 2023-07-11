@@ -5,9 +5,10 @@ resource "helm_release" "postgresql-ha" {
   namespace  = var.kube_namespace
 
   # Protect it from destroy command
-  lifecycle {
-    prevent_destroy = true
-  }
+  # TODO: Protect this
+  # lifecycle {
+  #   prevent_destroy = true
+  # }
 
   # Variables
   set {
@@ -17,6 +18,10 @@ resource "helm_release" "postgresql-ha" {
   set {
     name  = "postgresql.password"
     value = var.password
+  }
+  set {
+    name  = "postgresql.database"
+    value = var.database
   }
   set {
     name  = "postgresql.replicaCount"

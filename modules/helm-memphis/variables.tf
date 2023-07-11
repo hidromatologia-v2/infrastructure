@@ -3,19 +3,9 @@ variable "kube_namespace" {
   type        = string
 }
 
-variable "cluster_enabled" {
-  description = "cluster.enabled"
-  type        = bool
-}
-
-variable "cluster_replicas" {
-    description = "cluster.replicas"
-    type        = number
-}
-
 variable "root_password" {
-    description = "memphis.creds.rootPwd"
-    type        = string
+  description = "memphis.creds.rootPwd"
+  type        = string
 }
 
 variable "connection_token" {
