@@ -29,3 +29,23 @@ variable "memphis_connection_token" {
   type        = string
   default     = "my-token" # TODO: FIXME: Change this to a randomly generated credentials
 }
+
+# Redis
+
+variable "redis_cluster_nodes" {
+    description = "cluster.nodes"
+    type        = number
+    default     = 6
+}
+
+variable "redis_cluster_replicas" {
+    description = "cluster.replicas"
+    type        = number
+    default     = 1
+}
+
+variable "redis_password" {
+  description = "password"
+  type        = string
+  default     = "password" # TODO: FIXME: Change this to a randomly generated credentials
+}

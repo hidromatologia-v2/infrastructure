@@ -21,5 +21,4 @@ variable "root_password" {
 variable "connection_token" {
   description = "memphis.creds.connectionToken"
   type        = string
-  default     = "my-token" # TODO: FIXME: Change this to a randomly generated credentials
 }
