@@ -5,10 +5,9 @@ resource "helm_release" "postgresql-ha" {
   namespace  = var.kube_namespace
 
   # Protect it from destroy command
-  # TODO: Protect this
-  # lifecycle {
-  #   prevent_destroy = true
-  # }
+  lifecycle {
+    # TODO: FIXME: prevent_destroy = var.prevent_destroy
+  }
 
   # Variables
   set {

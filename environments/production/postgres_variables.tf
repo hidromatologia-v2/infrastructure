@@ -1,6 +1,7 @@
 variable "postgres_username" {
   description = "postgresql.username"
   type        = string
+  default     = "postgres"
 }
 
 variable "postgres_password" {

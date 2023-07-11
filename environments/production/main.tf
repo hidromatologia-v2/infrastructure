@@ -1,20 +1,3 @@
-# Kubernetes
-provider "kubernetes" {
-  config_path = var.kubeconfig_path
-}
-
-provider "helm" {
-  kubernetes {
-    config_path = var.kubeconfig_path
-  }
-}
-
-resource "kubernetes_namespace" "namespace" {
-  metadata {
-    name = var.kube_namespace
-  }
-}
-
 # Memphis
 module "helm_memphis" {
   source         = "../../modules/helm-memphis"
@@ -42,10 +25,10 @@ module "helm_postgres" {
   kube_namespace = var.kube_namespace
 
   # Variables
-  username      = var.postgres_username
-  password      = var.postgres_password
-  database      = var.postgres_database
-  replica_count = var.postgres_replica_count
+  username        = var.postgres_username
+  password        = var.postgres_password
+  database        = var.postgres_database
+  replica_count   = var.postgres_replica_count
 }
 
 # Stations service

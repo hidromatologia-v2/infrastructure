@@ -1,4 +1,9 @@
 resource "kubernetes_deployment" "stations_deployment" {
+  timeouts {
+    create = "3m"
+    update = "3m"
+    delete = "3m"
+  }
   metadata {
     name = "stations-deployment"
     labels = {

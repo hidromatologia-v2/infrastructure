@@ -1,7 +1,7 @@
 variable "stations_replicas" {
   description = "Replicas to initialy deploy"
   type        = string
-  default     = 15
+  default     = 1
 }
 
 locals {
