@@ -30,7 +30,7 @@ resource "kubernetes_deployment" "stations_deployment" {
 
       spec {
         container {
-          image = "ghcr.io/hidromatologia-v2/stations:0.0.5"
+          image = "ghcr.io/hidromatologia-v2/stations:0.0.6"
           name  = "stations"
 
           env {
