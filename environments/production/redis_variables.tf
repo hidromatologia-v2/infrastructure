@@ -6,7 +6,7 @@ variable "redis_password" {
 variable "redis_cluster_nodes" {
   description = "cluster.nodes"
   type        = number
-  default     = 6
+  default     = 3
 }
 
 variable "redis_cluster_replicas" {
